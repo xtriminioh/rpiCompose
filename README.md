@@ -1,2 +1,3 @@
-# rpiCompose
-This is my doc of .yaml 
+# Configuration of my Docker-Compose
+this is my configuration for my docker-compose
+for my class dbase.
