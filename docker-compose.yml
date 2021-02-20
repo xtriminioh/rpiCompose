@@ -34,7 +34,21 @@ services:
                 networks:
                         lan:
                                 ipv4_address: 192.168.0.9
-        
+
+        pgadmin:
+                image: biarms/pgadmin4
+                container_name: pgadmin
+                environment:
+                        PGADMIN_DEFAULT_EMAIL: xtriminioh@gmail.com
+                        PGADMIN_DEFAULT_PASSWORD: xtr123
+                volumes:
+                        - /home/pi/mysql-data:/root/.pgadmin
+                ports:
+                        - "5050:80"
+                restart: unless-stopped
+                networks:
+                        lan:
+                                ipv4_address: 192.168.0.8
 
 
 networks:
